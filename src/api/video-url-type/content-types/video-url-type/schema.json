@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_url_types",
+  "info": {
+    "singularName": "video-url-type",
+    "pluralName": "video-url-types",
+    "displayName": "VideoUrlType",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "videos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::video.video",
+      "inversedBy": "video_url_types"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipe_image_and_descriptions",
+  "info": {
+    "singularName": "recipe-image-and-description",
+    "pluralName": "recipe-image-and-descriptions",
+    "displayName": "Recipe(Image&Description)",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titile": {
+      "type": "string"
+    },
+    "RecipeImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "recipes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::recipe.recipe",
+      "inversedBy": "recipe_image_and_descriptions"
+    }
+  }
+}

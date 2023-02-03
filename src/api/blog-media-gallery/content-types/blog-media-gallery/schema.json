@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_media_galleries",
+  "info": {
+    "singularName": "blog-media-gallery",
+    "pluralName": "blog-media-galleries",
+    "displayName": "BlogMediaGallery",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "BlogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog.blog",
+      "inversedBy": "blog_media_galleries"
+    }
+  }
+}

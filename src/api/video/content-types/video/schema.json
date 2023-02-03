@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos",
+  "info": {
+    "singularName": "video",
+    "pluralName": "videos",
+    "displayName": "Video",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "VideoUrl": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "videos"
+    },
+    "video_url_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::video-url-type.video-url-type",
+      "mappedBy": "videos"
+    }
+  }
+}
