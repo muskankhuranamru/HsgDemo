@@ -5,9 +5,9 @@ module.exports = ({ env }) => ({
     connection: {
       host: env('DATABASE_HOST', 'localhost'),
       port: env.int('DATABASE_PORT', 5432),
-      database: env('DATABASE_NAME', 'mydb'),
-      user: env('DATABASE_USERNAME', 'arpit'),
-      password: env('DATABASE_PASSWORD', 'health'),
+      database: env('DATABASE_NAME', 'hsg_strapi_staging'),
+      user: env('DATABASE_USERNAME', 'healthsetgo'),
+      password: env('DATABASE_PASSWORD', 'Health1234!'),
       schema: env('DATABASE_SCHEMA', 'public'), // Not required
       ssl: false,
     },
